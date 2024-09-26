@@ -41,6 +41,10 @@ This is because we need to keep track of the variables in scope when the functio
 ## Exercise 6.2
 
 ## Exercise 6.3
+The answers to this exercise can be found in FunPar.fsy and FunPar.fsl where there will be comments specifying that the following line/lines were added.
+Specifically in FunLex.fsl two keywords were added "fun" and "->".
+In FunPar.fsy two tokens were added: FUN and ARROW, as well as an Expr: FUN Expr ARROW Expr
+
 
 ## Exercise 6.4
 
