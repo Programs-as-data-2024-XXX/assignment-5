@@ -42,7 +42,6 @@ This is because we need to keep track of the variables in scope when the functio
 Current changes/answer can be found in: 
 - The `Absyn.fs´ file on line 14
 - The `HigherFun.fs´ file on line 33, line 69-72 and line 74
-Mads ved ikke om ovenstående er korrekt og skal spørge TA's om man skal gøre mere og om hvordan man eventuelt kunne teste det, for han er confused. 
 
 ## Exercise 6.3
 The answers to this exercise can be found in FunPar.fsy and FunPar.fsl
