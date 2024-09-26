@@ -10,3 +10,6 @@
 !.paket/paket.bootstrapper.exe
 .ionide/
 .fake
+obj/project.nuget.cache
+obj/assignment-5.fsproj.nuget.dgspec.json
+/obj
