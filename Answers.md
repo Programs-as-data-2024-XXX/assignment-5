@@ -48,6 +48,11 @@ In FunPar.fsy two tokens were added: FUN and ARROW, as well as an Expr: FUN Expr
 
 ## Exercise 6.4
 
+### Explanation of why f is polymorphic in the first program, but not the second
+In the first program f doesn't use its argument therefore it can be polymorphic. The program will always return 1.
+
+In the second program f's depends on it's argument specifically being an integer. This is due to not only the recursive call "f(x+1)", but also the comparison "x < 10". f must therefore have type int -> int
+
 ## Exercise 6.5
 0) open ParseAndType;;
 
