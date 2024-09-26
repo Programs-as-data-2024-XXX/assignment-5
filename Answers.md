@@ -39,6 +39,10 @@ This is because we need to keep track of the variables in scope when the functio
 
 
 ## Exercise 6.2
+Current changes/answer can be found in: 
+- The `Absyn.fs´ file on line 14
+- The `HigherFun.fs´ file on line 33 and 70
+Mads ved ikke om ovenstående er korrekt og skal spørge TA's om man skal gøre mere og om hvordan man eventuelt kunne teste det, for han er confused. 
 
 ## Exercise 6.3
 
