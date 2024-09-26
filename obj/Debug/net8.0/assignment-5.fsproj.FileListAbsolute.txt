@@ -1,0 +1,5 @@
+/mnt/c/Users/mchrn/ITU/5_Semester/Programs_as_data/assignment-5/obj/Debug/net8.0/assignment-5.fsproj.AssemblyReference.cache
+/mnt/c/Users/mchrn/ITU/5_Semester/Programs_as_data/assignment-5/obj/Debug/net8.0/assignment-5.AssemblyInfoInputs.cache
+/mnt/c/Users/mchrn/ITU/5_Semester/Programs_as_data/assignment-5/obj/Debug/net8.0/assignment-5.AssemblyInfo.fs
+/mnt/c/Users/mchrn/ITU/5_Semester/Programs_as_data/assignment-5/obj/Debug/net8.0/assignment-5.fsproj.CoreCompileInputs.cache
+/mnt/c/Users/mchrn/ITU/5_Semester/Programs_as_data/assignment-5/obj/Debug/net8.0/assignment-5.sourcelink.json
