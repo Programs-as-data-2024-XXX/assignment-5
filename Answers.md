@@ -45,8 +45,17 @@ Current changes/answer can be found in:
 Mads ved ikke om ovenstående er korrekt og skal spørge TA's om man skal gøre mere og om hvordan man eventuelt kunne teste det, for han er confused. 
 
 ## Exercise 6.3
+The answers to this exercise can be found in FunPar.fsy and FunPar.fsl where there will be comments specifying that the following line/lines were added.
+Specifically in FunLex.fsl two keywords were added "fun" and "->".
+In FunPar.fsy two tokens were added: FUN and ARROW, as well as an Expr: FUN Expr ARROW Expr
+
 
 ## Exercise 6.4
+
+### Explanation of why f is polymorphic in the first program, but not the second
+In the first program f doesn't use its argument therefore it can be polymorphic. The program will always return 1.
+
+In the second program f's depends on it's argument specifically being an integer. This is due to not only the recursive call "f(x+1)", but also the comparison "x < 10". f must therefore have type int -> int
 
 ## Exercise 6.5
 0) open ParseAndType;;

@@ -1,8 +1,8 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
-      "FSharp.Core/8.0.400": {
+    "net6.0": {
+      "FSharp.Core/8.0.200": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/FSharp.Core.dll": {
@@ -75,15 +75,15 @@
     }
   },
   "libraries": {
-    "FSharp.Core/8.0.400": {
-      "sha512": "kHMdDDmlZl98tujgHCmL8/HNH9VKbxsRMC9s7wbwr4noR40SSa5D4d00yF8cMK52s8jabVuiLLcrUw9r+PkKDQ==",
+    "FSharp.Core/8.0.200": {
+      "sha512": "U016Y0NhtIEQvbmxf6Sff9lx7PTSGEFctA/kLrJr9MvNfKwjrzlK/4C2V1StgsapegWeGYW6K8Zd/D6vc9C4Yw==",
       "type": "package",
-      "path": "fsharp.core/8.0.400",
+      "path": "fsharp.core/8.0.200",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "fsharp.core.8.0.400.nupkg.sha512",
+        "fsharp.core.8.0.200.nupkg.sha512",
         "fsharp.core.nuspec",
         "lib/netstandard2.0/FSharp.Core.dll",
         "lib/netstandard2.0/FSharp.Core.xml",
@@ -139,36 +139,38 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
-      "FSharp.Core >= 8.0.400",
+    "net6.0": [
+      "FSharp.Core >= 8.0.200",
       "FsLexYacc.Runtime >= 11.3.0"
     ]
   },
   "packageFolders": {
-    "/home/macj/.nuget/packages/": {}
+    "C:\\Users\\maxbk\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/c/Users/mchrn/ITU/5_Semester/Programs_as_data/assignment-5/assignment-5.fsproj",
+      "projectUniqueName": "c:\\Users\\maxbk\\GitHub\\programs-as-data-2024-XXX\\assignment-5\\assignment-5.fsproj",
       "projectName": "assignment-5",
-      "projectPath": "/mnt/c/Users/mchrn/ITU/5_Semester/Programs_as_data/assignment-5/assignment-5.fsproj",
-      "packagesPath": "/home/macj/.nuget/packages/",
-      "outputPath": "/mnt/c/Users/mchrn/ITU/5_Semester/Programs_as_data/assignment-5/obj/",
+      "projectPath": "c:\\Users\\maxbk\\GitHub\\programs-as-data-2024-XXX\\assignment-5\\assignment-5.fsproj",
+      "packagesPath": "C:\\Users\\maxbk\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\maxbk\\GitHub\\programs-as-data-2024-XXX\\assignment-5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/macj/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\maxbk\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net6.0"
       ],
       "sources": {
-        "/usr/share/dotnet/sdk/8.0.401/FSharp/library-packs": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\8.0.203\\FSharp\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -179,13 +181,13 @@
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[8.0.400, )",
+            "version": "[8.0.200, )",
             "generatePathProperty": true
           },
           "FsLexYacc.Runtime": {
@@ -205,12 +207,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.28, 6.0.28]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
