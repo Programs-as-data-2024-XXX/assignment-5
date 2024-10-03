@@ -15,6 +15,8 @@ type token =
   | TIMES
   | DIV
   | MOD
+  | FUN
+  | ARROW
   | ELSE
   | END
   | FALSE
@@ -42,6 +44,8 @@ type tokenId =
     | TOKEN_TIMES
     | TOKEN_DIV
     | TOKEN_MOD
+    | TOKEN_FUN
+    | TOKEN_ARROW
     | TOKEN_ELSE
     | TOKEN_END
     | TOKEN_FALSE

@@ -32,7 +32,6 @@ let keyword s =
     | "true"  -> CSTBOOL true
     (* Exercise 6.3 - keywords *)
     | "fun"   -> FUN
-    | "->"    -> ARROW
     | _       -> NAME s
 }
 
@@ -59,6 +58,7 @@ rule Token = parse
   | '('             { LPAR }
   | ')'             { RPAR }
   | eof             { EOF }
+  | "->"            { ARROW }
   | _               { failwith "Lexer error: illegal symbol" }
 
 and SkipComment = parse
