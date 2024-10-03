@@ -58,33 +58,34 @@ type tyexpr =
 type value = 
   | Int of int
   | Closure of string * string * tyexpr * value env       (* (f, x, fBody, fDeclEnv) *)
+  | List of value list
   
-
-let rec eval (e : tyexpr) (env : value env) : int =
+// This is Exercise 5.7
+let rec eval (e : tyexpr) (env : value env) : value =
     match e with
-    | CstI i -> i
-    | CstB b -> if b then 1 else 0
+    | CstI i -> Int i
+    | CstB b -> if b then Int 1 else Int 0
     | Var x  ->
       match lookup env x with
-      | Int i -> i 
+      | Int i -> Int i 
       | _     -> failwith "eval Var"
     | Prim(ope, e1, e2) -> 
       let i1 = eval e1 env
       let i2 = eval e2 env
-      match ope with
-      | "*" -> i1 * i2
-      | "+" -> i1 + i2
-      | "-" -> i1 - i2
-      | "=" -> if i1 = i2 then 1 else 0
-      | "<" -> if i1 < i2 then 1 else 0
+      match (ope, i1, i2) with
+      | ("*", Int i1, Int i2) -> Int (i1 * i2)
+      | ("+", Int i1, Int i2) -> Int (i1 + i2)
+      | ("-", Int i1, Int i2) -> Int (i1 - i2)
+      | ("=", Int i1, Int i2) -> if i1 = i2 then Int 1 else Int 0
+      | ("<", Int i1, Int i2) -> if i1 < i2 then Int 1 else Int 0
       | _   -> failwith "unknown primitive"
     | Let(x, eRhs, letBody) -> 
-      let xVal = Int(eval eRhs env)
+      let xVal = eval eRhs env
       let bodyEnv = (x, xVal) :: env 
       eval letBody bodyEnv
     | If(e1, e2, e3) -> 
       let b = eval e1 env
-      if b<>0 then eval e2 env else eval e3 env
+      if b<>Int 0 then eval e2 env else eval e3 env
     | Letfun(f, x, _, fBody, _, letBody) -> 
       let bodyEnv = (f, Closure(f, x, fBody, env)) :: env 
       eval letBody bodyEnv
@@ -92,12 +93,12 @@ let rec eval (e : tyexpr) (env : value env) : int =
       let fClosure = lookup env f
       match fClosure with
       | Closure (f, x, fBody, fDeclEnv) ->
-        let xVal = Int(eval eArg env)
+        let xVal = eval eArg env
         let fBodyEnv = (x, xVal) :: (f, fClosure) :: fDeclEnv
         eval fBody fBodyEnv
       | _ -> failwith "eval Call: not a function"
     | Call _ -> failwith "illegal function in Call"
-    | ListExpr(elems, _) -> List.map(fun elem -> eval elem env) elems
+    | ListExpr(elems, _) -> List (List.map(fun elem -> eval elem env) elems)
 
 (* Type checking for the first-order functional language: *)
 
@@ -142,6 +143,7 @@ let rec typ (e : tyexpr) (env : typ env) : typ =
         else failwith "Call: wrong argument type"
       | _ -> failwith "Call: unknown function"
     | Call(_, eArg) -> failwith "Call: illegal function in call"
+    // This is Exercise 5.7
     | ListExpr(elems, elemType) ->
         let elemTypes = List.map(fun elem -> typ elem env) elems
         if List.forall (fun t -> t = elemType) elemTypes then

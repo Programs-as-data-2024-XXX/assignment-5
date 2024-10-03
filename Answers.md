@@ -1,7 +1,7 @@
 ## Exercise 5.1
-
+These exercises are in exercise_5_1.cs and exercise_5_1.fs
 ## Exercise 5.7
-
+These exercises are in TypedFun.fs
 ## Exercise 6.1
 ``` bash
 run (fromString @"let add x = let f y = x+y in f end in add 2 5 end");;
