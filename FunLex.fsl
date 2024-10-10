@@ -30,7 +30,6 @@ let keyword s =
     | "not"   -> NOT
     | "then"  -> THEN
     | "true"  -> CSTBOOL true
-    (* Exercise 6.3 - keywords *)
     | "fun"   -> FUN
     | _       -> NAME s
 }

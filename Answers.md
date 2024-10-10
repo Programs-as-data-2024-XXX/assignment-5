@@ -51,6 +51,8 @@ In FunPar.fsy two tokens were added: FUN and ARROW, as well as an Expr: FUN NAME
 
 ## Exercise 6.4
 ![Type rule tree for 6.4 (i)](6_4_1.jpg)
+
+![Type rule tree for 6.4 (ii)](6_4_2.jpg)
 ### Explanation of why f is polymorphic in the first program, but not the second
 In the first program f doesn't use its argument therefore it can be polymorphic. The program will always return 1.
 
